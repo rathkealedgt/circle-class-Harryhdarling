@@ -45,8 +45,8 @@
     End Function
 
     Public Function Distance(p As Point) As Double
-        Dim xs As Double = Math.Pow(Me.x, 2)
-        Dim ys As Double = Math.Pow(Me.y, 2)
+        Dim xs As Double = (Math.Abs(Me.x) + Math.Abs(p.GetX())) ^ 2
+        Dim ys As Double = (Math.Abs(Me.y) + Math.Abs(p.GetY())) ^ 2
 
         Return Math.Sqrt(xs + ys)
 
